@@ -1,6 +1,11 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Stage = ({ setStage }) => {
+  const navigate = useNavigate();
+  const changePage = () => {
+    navigate("/tasks");
+  };
   const [district, setDistrict] = useState("");
   return (
     <div className="hero h-full bg-base-200">
@@ -20,7 +25,9 @@ const Stage = ({ setStage }) => {
             </p>
             <a className="link">I want to know my District</a>
             <div className="flex flex-col gap-5">
-              <button className="btn btn-primary">Continue</button>
+              <button className="btn btn-primary" onClick={changePage}>
+                Continue
+              </button>
               <button
                 className="btn bg-white text-black border-2 border-blue-500"
                 onClick={(e) => {
