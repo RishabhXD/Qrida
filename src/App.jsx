@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Prepration from "./components/Prepration";
 import Stage from "./components/Stage";
 import OnBoard from "./components/OnBoard";
+import ProgressBar from "./components/ProgressBar";
 
 function App() {
   const [name, setName] = useState("");
@@ -20,6 +21,7 @@ function App() {
           element={<Prepration name={name} setName={setName} />}
         ></Route>
         <Route path="/tasks" element={<OnBoard />}></Route>
+        <Route path="/progress" element={<ProgressBar />}></Route>
       </Routes>
     </BrowserRouter>
   );

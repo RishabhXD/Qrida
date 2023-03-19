@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 const Stage = ({ setStage }) => {
   const navigate = useNavigate();
   const changePage = () => {
-    navigate("/tasks");
+    navigate("/progress");
   };
   const [district, setDistrict] = useState("");
   return (
