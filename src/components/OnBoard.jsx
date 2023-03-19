@@ -3,9 +3,62 @@ import { useNavigate } from "react-router-dom";
 
 const OnBoard = ({ setStage }) => {
   const navigate = useNavigate();
+  const [page, setPage] = useState(1);
   const changePage = () => {
+    setPage(page + 1);
     navigate("/letter");
   };
+  let render = "";
+  switch (page) {
+    case 0:
+      render = (
+        <tr className="hover">
+          <th>1</th>
+          <td>New Correspondence </td>
+          <td>19/3/2023</td>
+          <td>Sunday</td>
+          <td>
+            <div className="flex flex-row gap-4">
+              <label htmlFor="my-modal-4" className="btn btn-sm btn-ghost">
+                Deny
+              </label>
+              <button className="btn btn-sm btn-primary" onClick={changePage}>
+                Read
+              </button>
+            </div>
+          </td>
+        </tr>
+      );
+      break;
+    case 1:
+      render = (
+        <>
+          <tr className="hover">
+            <th>1</th>
+            <td>New Correspondence </td>
+            <td>19/3/2023</td>
+            <td>Sunday</td>
+            <td>Replied</td>
+          </tr>
+          <tr className="hover">
+            <th>2</th>
+            <td>Reply </td>
+            <td>21/3/2023</td>
+            <td>Tuesday</td>
+            <td>
+              <div className="flex flex-row gap-4">
+                <label htmlFor="my-modal-4" className="btn btn-sm btn-ghost">
+                  Deny
+                </label>
+                <button className="btn btn-sm btn-primary" onClick={changePage}>
+                  Read
+                </button>
+              </div>
+            </td>
+          </tr>
+        </>
+      );
+  }
   return (
     <div className="hero min-h-screen bg-base-200 w-full">
       <div className="hero-content flex-col lg:flex-row-reverse">
@@ -19,43 +72,29 @@ const OnBoard = ({ setStage }) => {
             mail, letters, phones and sometimes, the odd co-incidences observed
             in daily life...
           </p>
-          <div className="alert shadow-lg">
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="stroke-info flex-shrink-0 w-6 h-6"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                ></path>
-              </svg>
-
-              <span>You have received a new correspondence </span>
-            </div>
-            <div className="flex-none">
-              <label htmlFor="my-modal-4" className="btn btn-sm btn-ghost">
-                Deny
-              </label>
-              <button className="btn btn-sm btn-primary" onClick={changePage}>
-                Read
-              </button>
-              <input type="checkbox" id="my-modal-4" className="modal-toggle" />
-              <label htmlFor="my-modal-4" className="modal cursor-pointer">
-                <label className="modal-box relative bg-warning" htmlFor="">
-                  <h3 className="text-lg font-bold">Warning Letter!</h3>
-                  <p className="py-4">
-                    your office found out about your lack of intent to deal with
-                    a citizen’s concerns. Do better next time!
-                  </p>
-                </label>
-              </label>
-            </div>
-          </div>
+          <table className="table w-full">
+            {/* head */}
+            <thead>
+              <tr>
+                <th></th>
+                <th>Type</th>
+                <th>Date</th>
+                <th>Day</th>
+                <th>Response</th>
+              </tr>
+            </thead>
+            <tbody>{render}</tbody>
+          </table>
+          <input type="checkbox" id="my-modal-4" className="modal-toggle" />
+          <label htmlFor="my-modal-4" className="modal cursor-pointer">
+            <label className="modal-box relative bg-warning" htmlFor="">
+              <h3 className="text-lg font-bold">Warning Letter!</h3>
+              <p className="py-4">
+                your office found out about your lack of intent to deal with a
+                citizen’s concerns. Do better next time!
+              </p>
+            </label>
+          </label>
         </div>
       </div>
     </div>
