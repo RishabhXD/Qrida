@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const OnBoard = ({ setStage }) => {
   const navigate = useNavigate();
-  const [page, setPage] = useState(1);
+  // const { id } = useParams();
+  const [page, setPage] = useState(0);
   const changePage = () => {
-    setPage(page + 1);
     navigate("/letter");
   };
   let render = "";
@@ -58,6 +58,7 @@ const OnBoard = ({ setStage }) => {
           </tr>
         </>
       );
+      break;
   }
   return (
     <div className="hero min-h-screen bg-base-200 w-full">
@@ -73,7 +74,6 @@ const OnBoard = ({ setStage }) => {
             in daily life...
           </p>
           <table className="table w-full">
-            {/* head */}
             <thead>
               <tr>
                 <th></th>

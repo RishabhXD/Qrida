@@ -25,7 +25,7 @@ const Stage = ({ setStage }) => {
               </p>
               <a className="link">I want to know my District</a>
               <div className="flex flex-col gap-5">
-                <button className="btn btn-primary" onClick={setPage(1)}>
+                <button className="btn btn-primary" onClick={setLoad(1)}>
                   Continue
                 </button>
                 <button

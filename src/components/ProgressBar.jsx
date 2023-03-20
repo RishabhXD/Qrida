@@ -25,7 +25,7 @@ export default function ProgressBar() {
         document.getElementById("c1").style.strokeDasharray = [l, k];
         document.getElementById("c2").style.strokeDasharray = [k, l];
         document.getElementById("c1").style.strokeDashoffset = l;
-        console.log(k, l);
+        // console.log(k, l);
         document.getElementById("counterText").innerHTML = duration + 1 - i;
         i++;
       }, 1000);
