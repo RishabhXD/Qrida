@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "../css/progress.css";
 
 export default function ProgressBar() {
+  const navigate = useNavigate();
   function startTimer(duration) {
     var timeout = setTimeout(function () {
       var time = duration;
@@ -17,7 +19,8 @@ export default function ProgressBar() {
         if (i > time) {
           clearInterval(interval);
           clearTimeout(timeout);
-          window.location.href = "http://127.0.0.1:5173/tasks";
+          // window.location.href = "http://127.0.0.1:5173/tasks";
+          navigate("/tasks");
           return;
         }
         k = (i / duration) * 100;
