@@ -1,16 +1,17 @@
 import React, { useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 const OnBoard = ({ setStage }) => {
   const navigate = useNavigate();
-  // const { id } = useParams();
-  const [page, setPage] = useState(0);
+  const { id } = useParams();
+
+  const [page, setPage] = useState(Number(id));
   const changePage = () => {
-    navigate("/letter");
+    navigate(`/letter/${id}`);
   };
   let render = "";
   switch (page) {
-    case 0:
+    case 1:
       render = (
         <tr className="hover">
           <th>1</th>
@@ -30,7 +31,7 @@ const OnBoard = ({ setStage }) => {
         </tr>
       );
       break;
-    case 1:
+    case 2:
       render = (
         <>
           <tr className="hover">
@@ -45,6 +46,42 @@ const OnBoard = ({ setStage }) => {
             <td>Reply </td>
             <td>21/3/2023</td>
             <td>Tuesday</td>
+            <td>
+              <div className="flex flex-row gap-4">
+                <label htmlFor="my-modal-4" className="btn btn-sm btn-ghost">
+                  Deny
+                </label>
+                <button className="btn btn-sm btn-primary" onClick={changePage}>
+                  Read
+                </button>
+              </div>
+            </td>
+          </tr>
+        </>
+      );
+      break;
+    case 3:
+      render = (
+        <>
+          <tr className="hover">
+            <th>1</th>
+            <td>New Correspondence </td>
+            <td>19/3/2023</td>
+            <td>Sunday</td>
+            <td>Replied</td>
+          </tr>
+          <tr className="hover">
+            <th>2</th>
+            <td>Reply </td>
+            <td>21/3/2023</td>
+            <td>Tuesday</td>
+            <td>Replied</td>
+          </tr>
+          <tr className="hover">
+            <th>3</th>
+            <td>New Mail</td>
+            <td>24/3/2023</td>
+            <td>Friday</td>
             <td>
               <div className="flex flex-row gap-4">
                 <label htmlFor="my-modal-4" className="btn btn-sm btn-ghost">

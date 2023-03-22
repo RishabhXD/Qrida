@@ -20,7 +20,7 @@ export default function ProgressBar() {
           clearInterval(interval);
           clearTimeout(timeout);
           // window.location.href = "http://127.0.0.1:5173/tasks";
-          navigate("/tasks");
+          navigate("/tasks/1");
           return;
         }
         k = (i / duration) * 100;

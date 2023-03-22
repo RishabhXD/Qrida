@@ -1,31 +1,31 @@
 import React, { useState } from "react";
 import { Data } from "../data";
+import { useNavigate, useParams } from "react-router-dom";
 
 const Letters = () => {
-
-
+  const { id } = useParams();
+  const navigate = useNavigate();
   const [visible, setVisible] = useState(true);
-  const [message, setMessage] = useState('');
-  const handleChange = event => {
+  const [message, setMessage] = useState("");
+  const [index, setIndex] = useState(0);
+  const [messageId, setMessageId] = useState(Number(id));
+  console.log(messageId);
+  const handleChange = (event) => {
     setMessage(event.target.value);
   };
-  // const handleClick = event => {
-  //   event.preventDefault();
+  const handleClick = (event) => {
+    event.preventDefault();
 
-  //   if (message.trim().length !== 0) {
-  //     console.log('input value is NOT empty');
-  //     //change window location
-  //     setVisible(true);
-  //     console.log(visible);
-  //   } else {
-  //     setVisible(false);
-  //     console.log('input value is empty');
-  //   }
+    if (message.trim().length !== 0) {
+      setVisible(true);
+      console.log(visible);
+    } else {
+      setVisible(false);
+      console.log("input value is empty");
+    }
+  };
 
-    
-  // };
-
-
+  // setMessage(Data[index]);
 
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -35,53 +35,43 @@ const Letters = () => {
             <div className="card w-96 bg-base-100 shadow-xl">
               <div className="card-body">
                 <h2 className="card-title">Dear Sir/Ma'am</h2>
-                    {Data.map((u) => (                
+                {messageId === 1 ? (
                   <div>
-                    <p className="card-subtitle">{u.message1}</p>
+                    <p className="card-subtitle">{Data[index][0].message1}</p>
                   </div>
-                    ))}          
+                ) : messageId === 2 ? (
+                  <div>
+                    <p className="card-subtitle">{Data[index][1].message2}</p>
+                  </div>
+                ) : (
+                  <div>
+                    <p className="card-subtitle">{Data[index][2].message3}</p>
+                  </div>
+                )}
                 <div className="card-actions justify-end">
                   {/* The button to open modal */}
                   <label htmlFor="my-modal-3" className="btn btn-ghost">
-                    <a href="/tasks">Close</a>
+                    <button
+                      onClick={() => {
+                        navigate(`/tasks/${id}`);
+                      }}
+                    >
+                      Close
+                    </button>
                   </label>
-                  {/* Put this part before </body> tag */}
-                  <label htmlFor="my-modal" className="btn btn-primary">Reply</label>
-                  
-                 
-                  {visible ? (
-                    <>
-                    <input type="checkbox" id="my-modal" className="modal-toggle" />
-                    <div className="modal">
-                      <div className="modal-box">
-                        <h3 className="font-bold text-lg">Dear Sir,</h3>
-                        <p className="py-4">I’ve discovered concerning activity in the electricity department. Requesting an appointment to meet you as soon as possible</p>
-                        <div className="modal-action">
-                        <label htmlFor="my-modal" className="btn">Ok</label>
-                        
-                     </div>
-                    </div>
-                  </div>
-                  </>
-                  )
-                  : (
-                    <>
-                    <input type="checkbox" id="my-modal" className="modal-toggle" />
-                    <div className="modal">
-                      <div className="modal-box">
-                        <h3 className="font-bold text-lg">Empty Reply!</h3>
-                        <p className="py-4">Please enter a reply</p>
-                        <div className="modal-action">
-                        <label htmlFor="my-modal" className="btn">Ok</label>
-                      </div>
-                    </div>
-                  </div>
-                    </>
-                  )}
-
+                  <label htmlFor="my-modal" className="btn btn-primary">
+                    Reply
+                  </label>
+                  {
+                    
+                  }
                 </div>
-                  <textarea id="my-modal-3" onChange={handleChange} autoComplete="off" placeholder="Reply"></textarea>
-                
+                <textarea
+                  id="my-modal-3"
+                  onChange={handleChange}
+                  autoComplete="off"
+                  placeholder="Reply"
+                ></textarea>
               </div>
             </div>
           </div>
