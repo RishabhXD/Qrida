@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Data } from "../data";
 import { useNavigate, useParams } from "react-router-dom";
 
@@ -9,7 +9,12 @@ const Letters = () => {
   const [message, setMessage] = useState("");
   const [index, setIndex] = useState(0);
   const [messageId, setMessageId] = useState(Number(id));
-  console.log(messageId);
+  useEffect(() => {
+    const len = Data.length;
+    const randomInt = Math.floor(Math.random() * len);
+    setIndex(randomInt);
+  }, []);
+
   const handleChange = (event) => {
     setMessage(event.target.value);
   };
@@ -24,8 +29,6 @@ const Letters = () => {
       console.log("input value is empty");
     }
   };
-
-  // setMessage(Data[index]);
 
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -62,9 +65,7 @@ const Letters = () => {
                   <label htmlFor="my-modal" className="btn btn-primary">
                     Reply
                   </label>
-                  {
-                    
-                  }
+                  {}
                 </div>
                 <textarea
                   id="my-modal-3"
