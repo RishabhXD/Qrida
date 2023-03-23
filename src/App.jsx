@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import OnBoard from "./components/OnBoard";
 import ProgressBar from "./components/ProgressBar";
 import Letters from "./components/Letters";
+import Complete from "./components/Complete";
 
 function App() {
   const [name, setName] = useState("");
@@ -25,6 +26,7 @@ function App() {
         <Route path="/tasks/:id" element={<OnBoard />}></Route>
         <Route path="/progress" element={<ProgressBar />}></Route>
         <Route path="/letter/:id" element={<Letters />}></Route>
+        <Route path="/complete" element={<Complete />}></Route>
       </Routes>
       <ToastContainer />
     </BrowserRouter>

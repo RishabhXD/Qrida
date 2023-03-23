@@ -3,7 +3,7 @@ import { Data } from "../data";
 import { useNavigate, useParams } from "react-router-dom";
 
 const Letters = () => {
-  const { id } = useParams();
+  let { id } = useParams();
   const navigate = useNavigate();
   const [visible, setVisible] = useState(true);
   const [message, setMessage] = useState("");
@@ -62,10 +62,18 @@ const Letters = () => {
                       Close
                     </button>
                   </label>
-                  <label htmlFor="my-modal" className="btn btn-primary">
+                  <label htmlFor="my-modal" className="btn btn-primary" onClick={() => {
+                    //update id to id+1 and navigate
+                    id = Number(id) + 1;
+                    navigate(`/tasks/${id}`);
+                    //navigate to new page if id is 4
+                    if (id === 4) {
+                      navigate(`/complete`);
+                    }
+                      }}
+                    disabled={message.trim().length === 0}>
                     Reply
                   </label>
-                  {}
                 </div>
                 <textarea
                   id="my-modal-3"
