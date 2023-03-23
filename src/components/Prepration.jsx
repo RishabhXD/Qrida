@@ -4,6 +4,7 @@ import Stage from "./Stage";
 
 const Prepration = ({ name, setName }) => {
   const [stage, setStage] = useState(0);
+  console.log(stage);
   let render = "";
   const textArr = [
     "A pre-preparation routine can be defined as a set of nudges in the form of conversation cues and lines of thinking, connecting & having an interesting conversation relevant to the preparation material",

@@ -5,6 +5,7 @@ import ProgressBar from "./ProgressBar";
 const Stage = ({ setStage }) => {
   const [district, setDistrict] = useState("");
   const [load, setLoad] = useState(0);
+  console.log(load);
 
   return (
     <div className="hero min-h-screen bg-base-200">
@@ -25,7 +26,12 @@ const Stage = ({ setStage }) => {
               </p>
               <a className="link">I want to know my District</a>
               <div className="flex flex-col gap-5">
-                <button className="btn btn-primary" onClick={setLoad(1)}>
+                <button
+                  className="btn btn-primary"
+                  onClick={() => {
+                    setLoad(1);
+                  }}
+                >
                   Continue
                 </button>
                 <button
