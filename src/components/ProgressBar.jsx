@@ -58,9 +58,9 @@ export default function ProgressBar() {
   startTimer(10);
 
   return (
-    <div class="text-center flex flex-col justify-center items-center">
-      <div class="inline-block">
-        <svg width="100px" height="100px" viewBox="0 0 42 42" class="donut">
+    <div class="text-center flex flex-col justify-center items-center text-white">
+      <div class="inline-block text-white">
+        <svg width="100px" height="100px" viewBox="0 0 42 42" className="donut text-white">
           <circle
             id="c1"
             cx="21"

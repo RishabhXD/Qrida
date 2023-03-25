@@ -15,13 +15,25 @@ export default function Complete() {
               We're also building a community of aspirants to study and prepare
               together. Join our community on
             </p>
-            <a className="btn btn-ghost hover:text-red-500">
+            <a
+              className="btn btn-ghost hover:text-red-500"
+              href="https://www.instagram.com/qrida.club/"
+              target="_blank"
+            >
               <AiOutlineInstagram fontSize={25} />
             </a>
-            <a className="btn btn-ghost hover:text-green-500">
+            <a
+              className="btn btn-ghost hover:text-green-500"
+              href="https://chat.whatsapp.com/H7ebazxtviU0ppEUwMT06C"
+              target="_blank"
+            >
               <AiOutlineWhatsApp fontSize={25} />
             </a>
-            <a className="btn btn-ghost hover:text-blue-500">
+            <a
+              className="btn btn-ghost hover:text-blue-500"
+              href="https://t.me/qridaclub"
+              target="_blank"
+            >
               <FaTelegramPlane fontSize={25} />
             </a>
           </div>

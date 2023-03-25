@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+// import Hello from "../assets/Images/Hello There.png";
 const Hero = ({ name, setName }) => {
   const navigate = useNavigate();
   const changePage = () => {
@@ -11,8 +11,14 @@ const Hero = ({ name, setName }) => {
   };
 
   return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content text-center">
+    <div
+      className="hero min-h-screen"
+      style={{
+        backgroundImage: `url("/Images/Hello There.png")`,
+      }}
+    >
+      <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero-content text-center text-white">
         <div className="max-w-md">
           <h1 className="font-bold text-4xl bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
             Hello there
@@ -24,12 +30,12 @@ const Hero = ({ name, setName }) => {
           <input
             type="text"
             placeholder="Enter Name"
-            className="input input-bordered input-primary w-full max-w-xs mb-6"
+            className="input input-bordered input-primary w-full max-w-xs mb-6 text-black"
             value={name}
             onChange={changeVal}
           />
           <button
-            className="btn btn-primary"
+            className="btn btn-primary disabled:text-white disabled:btn-ghost"
             onClick={changePage}
             disabled={name.trim().length === 0}
           >

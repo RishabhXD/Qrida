@@ -25,22 +25,22 @@ const Footer = () => {
         <span className="footer-title">Social</span>
         <div className="grid grid-flow-col gap-8">
           <a
-            href="http://"
-            target="blank"
+            href="https://www.instagram.com/qrida.club/"
+            target="_blank"
             className="cursor-pointer hover:text-red-500"
           >
             <AiOutlineInstagram fontSize={25} />
           </a>
           <a
-            href="http://"
-            target="blank"
+            href="https://chat.whatsapp.com/H7ebazxtviU0ppEUwMT06C"
+            target="_blank"
             className="cursor-pointer hover:text-green-500"
           >
             <AiOutlineWhatsApp fontSize={25} />
           </a>
           <a
-            href="http://"
-            target="blank"
+            href="https://t.me/qridaclub"
+            target="_blank"
             className="cursor-pointer hover:text-blue-500"
           >
             <FaTelegramPlane fontSize={25} />

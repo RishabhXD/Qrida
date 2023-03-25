@@ -21,6 +21,7 @@ circle {
 #counterText {
     -webkit-animation: heartBeat 1s infinite;
     animation: heartBeat 1s infinite;
+    color: white;
 }
 
 @-webkit-keyframes heartBeat {

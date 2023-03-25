@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import StageComponent from "./StageComponent";
 import Stage from "./Stage";
-
+import img1 from "/Images/OPTION AC.png";
+import img2 from "/Images/OPTION B.png";
 const Prepration = ({ name, setName }) => {
   const [stage, setStage] = useState(0);
   console.log(stage);
@@ -20,10 +21,16 @@ const Prepration = ({ name, setName }) => {
   switch (stage) {
     case 0:
       render = (
-        <div className="hero min-h-screen bg-base-200">
+        <div
+          className="hero min-h-screen "
+          style={{
+            backgroundImage: `url("/Images/How_s your prep going_ .png")`,
+          }}
+        >
+          <div className="hero-overlay bg-opacity-60"></div>
           <div className="hero-content text-center">
             <div className="max-w-md">
-              <p className="py-6 font-bold">
+              <p className="py-6 font-bold text-white">
                 Hello {name}, how’s your preparation going today?
               </p>
               <ul className="menu bg-base-100 w-56 rounded-box">
@@ -75,6 +82,7 @@ const Prepration = ({ name, setName }) => {
           text={textArr[0]}
           buttonText={buttonArr[0]}
           setStage={setStage}
+          img={img1}
         />
       );
       break;
@@ -84,6 +92,7 @@ const Prepration = ({ name, setName }) => {
           text={textArr[1]}
           buttonText={buttonArr[1]}
           setStage={setStage}
+          img={img2}
         />
       );
       break;
@@ -91,6 +100,7 @@ const Prepration = ({ name, setName }) => {
       render = (
         <StageComponent
           text={textArr[2]}
+          img={img1}
           buttonText={buttonArr[2]}
           setStage={setStage}
         />

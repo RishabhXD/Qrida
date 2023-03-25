@@ -23,6 +23,7 @@ const Letters = () => {
   const [myMinistry, setMyMinistry] = useState(arrMinistry.indexOf(ministry));
   const [index, setIndex] = useState(0);
   const [messageId, setMessageId] = useState(Number(id));
+  const [img, setImg] = useState("");
 
   useEffect(() => {
     const len = Data[myMinistry].length;
@@ -31,8 +32,20 @@ const Letters = () => {
     if (len === 1) {
       setIndex(0);
     }
+    switch (messageId) {
+      case 1:
+        setImg(Data[myMinistry][index][0].img1);
+        break;
+      case 2:
+        setImg(Data[myMinistry][index][1].img2);
+        break;
+      case 3:
+        setImg(Data[myMinistry][index][2].img3);
+        break;
+      default:
+        break;
+    }
   }, []);
-  console.log(index);
 
   const handleChange = (event) => {
     setMessage(event.target.value);
@@ -50,7 +63,13 @@ const Letters = () => {
   };
 
   return (
-    <div className="hero min-h-screen bg-base-200">
+    <div
+      className="hero min-h-screen"
+      style={{
+        backgroundImage: `url("${img}")`,
+      }}
+    >
+      <div className="hero-overlay bg-opacity-60"></div>
       <div className="hero-content ">
         <div className="max-w-md">
           <div className="flex">
