@@ -29,7 +29,7 @@ const Letters = () => {
     const randomInt = Math.floor(Math.random() * len);
     setIndex(randomInt);
     if (len === 1) {
-      setIndex(1);
+      setIndex(0);
     }
   }, []);
   console.log(index);
