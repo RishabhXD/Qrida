@@ -1,21 +1,32 @@
-import React from 'react'
+import React from "react";
+import { AiOutlineInstagram, AiOutlineWhatsApp } from "react-icons/ai";
+import { FaTelegramPlane } from "react-icons/fa";
 
 export default function Complete() {
   return (
     <>
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content text-center">
-        <div className="max-w-md">
-          <h1 className="text-5xl font-bold">Thank you for Participating</h1>
-          <p className="pt-6 pb-6">
-          Join our whatsapp group for more updates.
-          </p>
-          <button className="btn btn-primary" >
-            Join Group
-          </button>
+      <div className="hero min-h-screen bg-base-200">
+        <div className="hero-content text-center">
+          <div className="max-w-md">
+            <h1 className="font-bold text-4xl bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+              Thank you for Participating
+            </h1>
+            <p className="pt-6 pb-6">
+              We're also building a community of aspirants to study and prepare
+              together. Join our community on
+            </p>
+            <a className="btn btn-ghost hover:text-red-500">
+              <AiOutlineInstagram fontSize={25} />
+            </a>
+            <a className="btn btn-ghost hover:text-green-500">
+              <AiOutlineWhatsApp fontSize={25} />
+            </a>
+            <a className="btn btn-ghost hover:text-blue-500">
+              <FaTelegramPlane fontSize={25} />
+            </a>
+          </div>
         </div>
       </div>
-    </div>
     </>
-  )
+  );
 }

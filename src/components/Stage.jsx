@@ -24,10 +24,17 @@ const Stage = ({ setStage }) => {
                   }}
                 />
               </p>
-              <a className="link">I want to know my District</a>
+              <a
+                className="link"
+                href="https://knowindia.india.gov.in/districts/"
+                target="_blank"
+              >
+                I want to know my District
+              </a>
               <div className="flex flex-col gap-5">
                 <button
                   className="btn btn-primary"
+                  disabled={district.trim().length === 0}
                   onClick={() => {
                     setLoad(1);
                   }}

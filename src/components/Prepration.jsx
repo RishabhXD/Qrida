@@ -11,13 +11,18 @@ const Prepration = ({ name, setName }) => {
     "Good for you. Keep up the desire by using this feature tool whenever you think you're not in the preparation zone and state of mind",
     "As per clinical researchers and elder members of the community, being bored is a symptom of monotony in the mind, lack of 'being in the zone' like desire & focus and lack of paying attention",
   ];
+  const buttonArr = [
+    "Let’s get started",
+    "Try a pre-prep conversation",
+    "Let's prepare",
+  ];
 
   switch (stage) {
     case 0:
       render = (
         <div className="max-w-md">
           <p className="py-6 font-bold">
-            Hello {name} How’s your preparation going today?
+            Hello {name}, how’s your preparation going today?
           </p>
           <ul className="menu bg-base-100 w-56 rounded-box">
             <li>
@@ -61,13 +66,31 @@ const Prepration = ({ name, setName }) => {
       );
       break;
     case 1:
-      render = <StageComponent text={textArr[0]} setStage={setStage} />;
+      render = (
+        <StageComponent
+          text={textArr[0]}
+          buttonText={buttonArr[0]}
+          setStage={setStage}
+        />
+      );
       break;
     case 2:
-      render = <StageComponent text={textArr[1]} setStage={setStage} />;
+      render = (
+        <StageComponent
+          text={textArr[1]}
+          buttonText={buttonArr[1]}
+          setStage={setStage}
+        />
+      );
       break;
     case 3:
-      render = <StageComponent text={textArr[2]} setStage={setStage} />;
+      render = (
+        <StageComponent
+          text={textArr[2]}
+          buttonText={buttonArr[2]}
+          setStage={setStage}
+        />
+      );
       break;
     case 4:
       render = <Stage setStage={setStage} />;

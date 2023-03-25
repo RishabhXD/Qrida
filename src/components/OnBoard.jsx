@@ -1,21 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
 
 const OnBoard = ({ setStage }) => {
   const navigate = useNavigate();
-  const { id } = useParams();
+  const { id, ministry } = useParams();
 
   const [page, setPage] = useState(Number(id));
   const changePage = () => {
-    navigate(`/letter/${id}`);
+    navigate(`/letter/${id}/${ministry}`);
   };
   let render = "";
+  console.log(ministry);
   switch (page) {
     case 1:
       render = (
         <tr className="hover">
           <th>1</th>
-          <td>New Correspondence </td>
+          <td>Office</td>
           <td>19/3/2023</td>
           <td>Sunday</td>
           <td>
@@ -36,14 +37,14 @@ const OnBoard = ({ setStage }) => {
         <>
           <tr className="hover">
             <th>1</th>
-            <td>New Correspondence </td>
+            <td>Office </td>
             <td>19/3/2023</td>
             <td>Sunday</td>
             <td>Replied</td>
           </tr>
           <tr className="hover">
             <th>2</th>
-            <td>Reply </td>
+            <td>Urgent </td>
             <td>21/3/2023</td>
             <td>Tuesday</td>
             <td>
@@ -65,14 +66,14 @@ const OnBoard = ({ setStage }) => {
         <>
           <tr className="hover">
             <th>1</th>
-            <td>New Correspondence </td>
+            <td>Office </td>
             <td>19/3/2023</td>
             <td>Sunday</td>
             <td>Replied</td>
           </tr>
           <tr className="hover">
             <th>2</th>
-            <td>Reply </td>
+            <td>Urgent </td>
             <td>21/3/2023</td>
             <td>Tuesday</td>
             <td>Replied</td>
@@ -97,12 +98,15 @@ const OnBoard = ({ setStage }) => {
       );
       break;
   }
+
   return (
     <div className="hero min-h-screen bg-base-200 w-full">
       <div className="hero-content flex-col lg:flex-row-reverse">
         <div>
-          <h1 className="text-xl font-bold">Show Ministry</h1>
-          <h1 className="text-xl font-bold">Show Level</h1>
+          <h1 className="text-xl font-bold">
+            {ministry ? ministry : "Ministry"}
+          </h1>
+          <h1 className="text-xl font-bold">Officer</h1>
           <p className="py-6">
             This is your first day at work. It feels like a beginning again,
             exactly as the first day of your preparation for civil services. You

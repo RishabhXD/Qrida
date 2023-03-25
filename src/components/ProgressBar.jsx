@@ -1,9 +1,30 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/progress.css";
+const ministries = [
+  "Central",
+  "Power",
+  "Culture",
+  "Communications",
+  "Agriculture",
+  "Pollution",
+  "Aviation",
+  " Human Resources",
+  "Education",
+  "Transport",
+  "Health",
+];
+const getRandomMinistry = () => {
+  const randomInt = Math.floor(Math.random() * ministries.length);
+  return ministries[randomInt];
+};
 
 export default function ProgressBar() {
   const navigate = useNavigate();
+  const [ministy, setMinisty] = useState("");
+  useEffect(() => {
+    setMinisty(getRandomMinistry());
+  }, []);
   function startTimer(duration) {
     var timeout = setTimeout(function () {
       var time = duration;
@@ -20,7 +41,7 @@ export default function ProgressBar() {
           clearInterval(interval);
           clearTimeout(timeout);
           // window.location.href = "http://127.0.0.1:5173/tasks";
-          navigate("/tasks/1");
+          navigate(`/tasks/1/${ministy}`);
           return;
         }
         k = (i / duration) * 100;
@@ -73,9 +94,8 @@ export default function ProgressBar() {
           </div>
 
           <p>
-            To begin the day’s preparation, close your eyes and imagine.
-            Visualization is one of the best techniques to begin your day’s
-            preparation...
+            Visualization is one of the best methods to begin the day’s
+            preparation. Imagine being an officer. Let's begin.
           </p>
         </div>
       </div>

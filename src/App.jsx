@@ -23,9 +23,9 @@ function App() {
           path="/prep"
           element={<Prepration name={name} setName={setName} />}
         ></Route>
-        <Route path="/tasks/:id" element={<OnBoard />}></Route>
+        <Route path="/tasks/:id/:ministry" element={<OnBoard />}></Route>
         <Route path="/progress" element={<ProgressBar />}></Route>
-        <Route path="/letter/:id" element={<Letters />}></Route>
+        <Route path="/letter/:id/:ministry" element={<Letters />}></Route>
         <Route path="/complete" element={<Complete />}></Route>
       </Routes>
       <ToastContainer />

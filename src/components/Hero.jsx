@@ -14,7 +14,9 @@ const Hero = ({ name, setName }) => {
     <div className="hero min-h-screen bg-base-200">
       <div className="hero-content text-center">
         <div className="max-w-md">
-          <h1 className="text-5xl font-bold">Hello there 👋</h1>
+          <h1 className="font-bold text-4xl bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
+            Hello there
+          </h1>
           <p className="pt-6">
             Welcome to Qrida’s pre-preparation conversation!
           </p>
@@ -23,9 +25,14 @@ const Hero = ({ name, setName }) => {
             type="text"
             placeholder="Enter Name"
             className="input input-bordered input-primary w-full max-w-xs mb-6"
+            value={name}
             onChange={changeVal}
           />
-          <button className="btn btn-primary" onClick={changePage}>
+          <button
+            className="btn btn-primary"
+            onClick={changePage}
+            disabled={name.trim().length === 0}
+          >
             Get Started
           </button>
         </div>
