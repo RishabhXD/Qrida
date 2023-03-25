@@ -20,48 +20,52 @@ const Prepration = ({ name, setName }) => {
   switch (stage) {
     case 0:
       render = (
-        <div className="max-w-md">
-          <p className="py-6 font-bold">
-            Hello {name}, how’s your preparation going today?
-          </p>
-          <ul className="menu bg-base-100 w-56 rounded-box">
-            <li>
-              <button
-                onClick={() => {
-                  setStage(1);
-                }}
-              >
-                A. Meh! Let’s see
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => {
-                  setStage(2);
-                }}
-              >
-                B. Can’t wait to begin!
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => {
-                  setStage(3);
-                }}
-              >
-                C. Bored right now
-              </button>
-            </li>
-            <li>
-              <button
-                onClick={() => {
-                  setStage(4);
-                }}
-              >
-                D. Let’s explore
-              </button>
-            </li>
-          </ul>
+        <div className="hero min-h-screen bg-base-200">
+          <div className="hero-content text-center">
+            <div className="max-w-md">
+              <p className="py-6 font-bold">
+                Hello {name}, how’s your preparation going today?
+              </p>
+              <ul className="menu bg-base-100 w-56 rounded-box">
+                <li>
+                  <button
+                    onClick={() => {
+                      setStage(1);
+                    }}
+                  >
+                    A. Meh! Let’s see
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      setStage(2);
+                    }}
+                  >
+                    B. Can’t wait to begin!
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      setStage(3);
+                    }}
+                  >
+                    C. Bored right now
+                  </button>
+                </li>
+                <li>
+                  <button
+                    onClick={() => {
+                      setStage(4);
+                    }}
+                  >
+                    D. Let’s explore
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
       );
       break;
@@ -98,13 +102,7 @@ const Prepration = ({ name, setName }) => {
     default:
       break;
   }
-  return (
-    <div className="hero min-h-screen bg-base-200">
-      <div className="hero-content text-center">
-        <div className="max-w-md">{render}</div>
-      </div>
-    </div>
-  );
+  return <div className="">{render}</div>;
 };
 
 export default Prepration;

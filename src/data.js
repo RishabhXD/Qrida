@@ -1,5 +1,5 @@
-export const Data = {
-  Central: [
+export const Data = [
+  [
     [
       {
         id: 1,
@@ -79,7 +79,7 @@ export const Data = {
       },
     ],
   ],
-  Culture: [
+  [
     [
       {
         id: 1,
@@ -133,7 +133,7 @@ export const Data = {
       },
     ],
   ],
-  Human: [
+  [
     [
       {
         id: 1,
@@ -161,7 +161,7 @@ export const Data = {
       },
     ],
   ],
-  Aviation: [
+  [
     [
       {
         id: 1,
@@ -189,7 +189,7 @@ export const Data = {
       },
     ],
   ],
-  Power: [
+  [
     [
       {
         id: 1,
@@ -243,7 +243,7 @@ export const Data = {
       },
     ],
   ],
-  Agriculture: [
+  [
     [
       {
         id: 1,
@@ -271,7 +271,7 @@ export const Data = {
       },
     ],
   ],
-  Health: [
+  [
     [
       {
         id: 1,
@@ -299,7 +299,7 @@ export const Data = {
       },
     ],
   ],
-  Pollution: [
+  [
     [
       {
         id: 1,
@@ -327,7 +327,7 @@ export const Data = {
       },
     ],
   ],
-  Transport: [
+  [
     [
       {
         id: 1,
@@ -355,7 +355,7 @@ export const Data = {
       },
     ],
   ],
-  Communication: [
+  [
     [
       {
         id: 1,
@@ -383,7 +383,7 @@ export const Data = {
       },
     ],
   ],
-  Education: [
+  [
     [
       {
         id: 1,
@@ -411,4 +411,4 @@ export const Data = {
       },
     ],
   ],
-};
+];

@@ -58,47 +58,42 @@ export default function ProgressBar() {
   startTimer(10);
 
   return (
-    <div className="hero min-h-screen bg-base-200 w-full">
-      <div className="hero-content flex-col lg:flex-row-reverse">
-        <div class="text-center">
-          <div class="inline-block">
-            <svg width="100px" height="100px" viewBox="0 0 42 42" class="donut">
-              <circle
-                id="c1"
-                cx="21"
-                cy="21"
-                r="15.91549430918954"
-                stroke-dasharray="100 0"
-                stroke-dashoffset="100"
-              ></circle>
-              <circle
-                id="c2"
-                cx="21"
-                cy="21"
-                r="15.91549430918954"
-                stroke-dasharray="0 100"
-                stroke-dashoffset="0"
-              ></circle>
-              <g class="chart-text">
-                <text
-                  x="50%"
-                  y="50%"
-                  dominant-baseline="middle"
-                  text-anchor="middle"
-                  id="counterText"
-                >
-                  5
-                </text>
-              </g>
-            </svg>
-          </div>
-
-          <p>
-            Visualization is one of the best methods to begin the day’s
-            preparation. Imagine being an officer. Let's begin.
-          </p>
-        </div>
+    <div class="text-center flex flex-col justify-center items-center">
+      <div class="inline-block">
+        <svg width="100px" height="100px" viewBox="0 0 42 42" class="donut">
+          <circle
+            id="c1"
+            cx="21"
+            cy="21"
+            r="15.91549430918954"
+            stroke-dasharray="100 0"
+            stroke-dashoffset="100"
+          ></circle>
+          <circle
+            id="c2"
+            cx="21"
+            cy="21"
+            r="15.91549430918954"
+            stroke-dasharray="0 100"
+            stroke-dashoffset="0"
+          ></circle>
+          <g class="chart-text">
+            <text
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+              id="counterText"
+            >
+              5
+            </text>
+          </g>
+        </svg>
       </div>
+      <p>
+        Visualization is one of the best methods to begin the day’s preparation.
+        Imagine being an officer. Let's begin.
+      </p>
     </div>
   );
 }
