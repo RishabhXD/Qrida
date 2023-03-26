@@ -61,7 +61,7 @@ export default function ProgressBar() {
     <div
       className="hero min-h-screen"
       style={{
-        backgroundImage: `url("https://media.discordapp.net/attachments/1088927203477172328/1089148967390035968/image.png?width=643&height=646")`,
+        backgroundImage: `url("https://cdn.discordapp.com/attachments/924801378986098768/1089559669246275584/IMG-20230326-WA0035.jpg")`,
       }}
     >
       <div className="hero-overlay "></div>
