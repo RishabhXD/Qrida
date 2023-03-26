@@ -120,7 +120,7 @@ const Letters = ({ name }) => {
                         navigate(`/complete`);
                       }
                       if (messageId === 1) {
-                        toast("You've received a letter", {
+                        toast.warn("You've received a letter", {
                           position: "bottom-left",
                           autoClose: 5000,
                           hideProgressBar: true,
@@ -130,8 +130,10 @@ const Letters = ({ name }) => {
                           progress: undefined,
                           theme: "light",
                           delay: 1000,
+                          icon: "🚀",
+                          className: "bg-yellow-200",
                         });
-                        toast(
+                        toast.success(
                           "Your pre-preparation has begun. Welcome to the community.",
                           {
                             position: "bottom-left",
@@ -142,10 +144,12 @@ const Letters = ({ name }) => {
                             draggable: true,
                             progress: undefined,
                             theme: "light",
+                            icon: "🚀",
+                            className: "bg-green-200",
                           }
                         );
                       } else if (messageId === 2) {
-                        toast("Its time to understand the real world", {
+                        toast.success("Its time to understand the real world", {
                           position: "bottom-left",
                           autoClose: 5000,
                           hideProgressBar: true,
@@ -155,8 +159,10 @@ const Letters = ({ name }) => {
                           progress: undefined,
                           theme: "light",
                           delay: 1000,
+                          icon: "🚀",
+                          className: "bg-green-200",
                         });
-                        toast("You've received a letter", {
+                        toast.warn("You've received a letter", {
                           position: "bottom-left",
                           autoClose: 5000,
                           hideProgressBar: true,
@@ -165,9 +171,11 @@ const Letters = ({ name }) => {
                           draggable: true,
                           progress: undefined,
                           theme: "light",
+                          icon: "🚀",
+                          className: "bg-yellow-200",
                         });
                       } else {
-                        toast(
+                        toast.success(
                           "Are you thinking about reading your preparation books yet?",
                           {
                             position: "bottom-left",
@@ -178,6 +186,8 @@ const Letters = ({ name }) => {
                             draggable: true,
                             progress: undefined,
                             theme: "light",
+                            icon: "🚀",
+                            className: "bg-green-200",
                           }
                         );
                       }

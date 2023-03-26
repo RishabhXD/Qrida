@@ -8,9 +8,9 @@ const Prepration = ({ name, setName }) => {
   console.log(stage);
   let render = "";
   const textArr = [
-    "A pre-preparation routine can be defined as a set of nudges in the form of conversation cues and lines of thinking, connecting & having an interesting conversation relevant to the preparation material",
+    "A pre-preparation routine consists of a set of prompts, cues & conversations. Inspired by the civil services syllabus.",
     "Good for you. Keep up the desire by using this feature tool whenever you think you're not in the preparation zone and state of mind",
-    "As per clinical researchers and elder members of the community, being bored is a symptom of monotony in the mind, lack of 'being in the zone' like desire & focus and lack of paying attention",
+    "As per clinical researchers and elder members of the community, being bored is a symptom of monotony in the mind. Let's make it easy.",
   ];
   const buttonArr = [
     "Let’s get started",
@@ -29,11 +29,11 @@ const Prepration = ({ name, setName }) => {
         >
           <div className="hero-overlay bg-opacity-30"></div>
           <div className="hero-content text-center">
-            <div className="max-w-md">
+            <div className="max-w-md justify-center items-center">
               <p className="py-6 font-bold text-white">
                 Hello {name}, how’s your preparation going today?
               </p>
-              <ul className="menu bg-base-100 w-56 rounded-box">
+              <ul className="menu bg-base-100 w-56 rounded-box mx-auto my-0">
                 <li>
                   <button
                     onClick={() => {

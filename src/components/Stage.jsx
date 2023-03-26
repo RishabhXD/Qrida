@@ -20,8 +20,8 @@ const Stage = ({ setStage }) => {
           <div className="hero-overlay "></div>
           <div className="hero-content text-center text-white">
             <div className="max-w-md">
-              <div className="flex flex-col gap-5">
-                <p>Choose your District</p>
+              <div className="flex flex-col gap-5 justify-center items-center">
+                <p>Enter your District</p>
                 <p>
                   <input
                     type="text"

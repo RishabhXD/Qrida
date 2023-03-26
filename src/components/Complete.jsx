@@ -16,19 +16,24 @@ export default function Complete() {
           <div className="max-w-md flex flex-col items-center">
             <img src="/qrida.png" className="h-28 w-28" />
             <h1 className="font-bold text-4xl bg-gradient-to-r from-pink-500 to-purple-500 bg-clip-text text-transparent">
-              Thank you for Participating
+              Thank you for Participating.
             </h1>
             <p className="pt-6 pb-6">
-              We're also building a community of aspirants to study and prepare
-              together. Join our community on
+              Open your preparation books if this conversation helped you focus
             </p>
+            <div className="divider mb-6 pb-6">OR</div>
             <button
               onClick={backToDistrict}
               className="btn border-none mb-2 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500 hover:bg-clip-text hover:text-transparent"
             >
               <VscDebugRestart />
-              Restart
+              Start a new conversation!
             </button>
+            <p className="pt-6 pb-6">
+              We're also building a community for aspirants to prepare together.
+              Join early and become a member!
+            </p>
+
             <div>
               <a
                 className="btn btn-ghost hover:text-red-500"
