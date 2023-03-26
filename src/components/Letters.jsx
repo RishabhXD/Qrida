@@ -67,7 +67,7 @@ const Letters = ({ name }) => {
 
   return (
     <div
-      className="hero min-h-screen"
+      className="hero min-h-screen min-w-min"
       style={{
         backgroundImage: `url("${img}")`,
       }}
@@ -205,7 +205,7 @@ const Letters = ({ name }) => {
                 ></textarea>
                 <div className="flex flex-row justify-between">
                   <label className="label">
-                    <span htmlFor="my-modal-1" className="label-text-alt">
+                    <span htmlFor="my-modal-1" className="label-text-alt link hover:text-blue-700">
                       How to reply
                     </span>
                     <input
@@ -233,7 +233,7 @@ const Letters = ({ name }) => {
                     </div>
                   </label>
                   <label className="label">
-                    <span htmlFor="my-modal" className="label-text-alt">
+                    <span htmlFor="my-modal" className="label-text-alt link hover:text-blue-700">
                       Clue
                     </span>
                     <input
