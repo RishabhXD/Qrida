@@ -5,7 +5,7 @@ const ministries = [
   "Central",
   "Power",
   "Culture",
-  "Communications",
+  "Communication",
   "Agriculture",
   "Pollution",
   "Aviation",

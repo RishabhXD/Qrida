@@ -31,10 +31,13 @@ export default function Complete() {
             </button>
             <p className="pt-6 pb-6">
               We're building India's first technology startup by aspirants for aspirants while taking inspiration from the civil services preparation journey.
-
-Join early and become members!
+              Join early and become members!
             </p>
-
+            <button className="btn border-none mb-2 hover:bg-gradient-to-r hover:from-pink-500 hover:to-purple-500 hover:bg-clip-text hover:text-transparent" onClick={
+              () => {
+                window.open("https://forms.gle/2nupRP7eAkJPzwtz6", "_blank")
+              }
+            }>Give us feedback</button>
             <div>
               <a
                 className="btn btn-ghost hover:text-red-500"
