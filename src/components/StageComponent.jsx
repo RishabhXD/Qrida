@@ -8,7 +8,7 @@ const StageComponent = ({ text, setStage, buttonText, img }) => {
         backgroundImage: `url('${img}')`,
       }}
     >
-      <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero-overlay bg-opacity-30"></div>
       <div className="hero-content text-center">
         <div className="max-w-md">
           <p className="py-6 font-bold text-white">{text}</p>

@@ -28,7 +28,10 @@ function App() {
           element={<OnBoard name={name} />}
         ></Route>
         <Route path="/progress" element={<ProgressBar />}></Route>
-        <Route path="/letter/:id/:ministry" element={<Letters />}></Route>
+        <Route
+          path="/letter/:id/:ministry"
+          element={<Letters name={name} />}
+        ></Route>
         <Route path="/complete" element={<Complete />}></Route>
       </Routes>
       <ToastContainer />

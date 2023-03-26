@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { Data } from "../data";
 import { useNavigate, useParams } from "react-router-dom";
+import { struct } from "../howTo";
 const arrMinistry = [
   "Central",
   "Culture",
-  "Human Resource",
+  "Human Resources",
   "Aviation",
   "Power",
   "Agriculture",
@@ -15,15 +16,16 @@ const arrMinistry = [
   "Education",
 ];
 
-const Letters = () => {
+const Letters = ({ name }) => {
   let { id, ministry } = useParams();
   const navigate = useNavigate();
   const [visible, setVisible] = useState(true);
   const [message, setMessage] = useState("");
-  const [myMinistry, setMyMinistry] = useState(arrMinistry.indexOf(ministry));
+  const myMinistry = arrMinistry.indexOf(ministry);
   const [index, setIndex] = useState(0);
-  const [messageId, setMessageId] = useState(Number(id));
+  const messageId = Number(id);
   const [img, setImg] = useState("");
+  const howTo = struct[myMinistry];
 
   useEffect(() => {
     const len = Data[myMinistry].length;
@@ -69,13 +71,13 @@ const Letters = () => {
         backgroundImage: `url("${img}")`,
       }}
     >
-      <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero-overlay bg-opacity-30"></div>
       <div className="hero-content ">
         <div className="max-w-md">
           <div className="flex">
-            <div className="card w-96 bg-base-100 shadow-xl">
+            <div className="card w-96 bg-base-100 shadow-xl opacity-80">
               <div className="card-body">
-                <h2 className="card-title">Dear Sir/Ma'am</h2>
+                <h2 className="card-title">Dear {name}</h2>
                 {messageId === 1 ? (
                   <div>
                     <p className="card-subtitle">
@@ -123,11 +125,84 @@ const Letters = () => {
                   </label>
                 </div>
                 <textarea
-                  id="my-modal-3"
                   onChange={handleChange}
                   autoComplete="off"
                   placeholder="Reply"
+                  className="px-2"
                 ></textarea>
+                <div className="flex flex-row justify-between">
+                  <label className="label">
+                    <span htmlFor="my-modal-1" className="label-text-alt">
+                      How to reply
+                    </span>
+                    <input
+                      type="checkbox"
+                      id="my-modal-1"
+                      className="modal-toggle opacity-100"
+                    />
+                    <div className="modal">
+                      <div className="modal-box">
+                        <h3 className="font-bold text-lg">How to reply?</h3>
+                        {messageId === 1 ? (
+                          <p className="py-4">{howTo}</p>
+                        ) : (
+                          <p className="py-4">
+                            Mention the important words and reply back with an
+                            acknowledgement
+                          </p>
+                        )}
+                        <div className="modal-action">
+                          <label htmlFor="my-modal-1" className="btn">
+                            Got it
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                  <label className="label">
+                    <span htmlFor="my-modal" className="label-text-alt">
+                      Clue
+                    </span>
+                    <input
+                      type="checkbox"
+                      id="my-modal"
+                      className="modal-toggle opacity-100"
+                    />
+                    <div className="modal opacity-100">
+                      <div className="modal-box">
+                        <h3 className="font-bold text-lg">Clue</h3>
+                        {messageId === 1 ? (
+                          <p className="py-4">
+                            Aspirants love to deal with the complexities of the
+                            real world. A good way to kick-start your
+                            preparation is to accept the complexities that a
+                            civil servant faces in dealing with day to day
+                            problems of society
+                          </p>
+                        ) : messageId === 2 ? (
+                          <p className="py-4">
+                            Aspirants love to connect events and information
+                            from around the world. Before starting preparation,
+                            it is important to be mentally active and warmed up.
+                          </p>
+                        ) : (
+                          <p className="py-4">
+                            You'll start to see some patterns in the
+                            information. Preparing for the civil services needs
+                            a lot of inter-disiciplinary thinking and logical &
+                            positive approach to solving real-world problems.
+                          </p>
+                        )}
+
+                        <div className="modal-action">
+                          <label htmlFor="my-modal" className="btn">
+                            Got it
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </label>
+                </div>
               </div>
             </div>
           </div>

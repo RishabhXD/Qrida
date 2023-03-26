@@ -27,7 +27,7 @@ const Prepration = ({ name, setName }) => {
             backgroundImage: `url("/Images/How_s your prep going_ .png")`,
           }}
         >
-          <div className="hero-overlay bg-opacity-60"></div>
+          <div className="hero-overlay bg-opacity-30"></div>
           <div className="hero-content text-center">
             <div className="max-w-md">
               <p className="py-6 font-bold text-white">

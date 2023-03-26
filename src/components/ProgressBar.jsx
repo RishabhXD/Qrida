@@ -9,7 +9,7 @@ const ministries = [
   "Agriculture",
   "Pollution",
   "Aviation",
-  " Human Resources",
+  "Human Resources",
   "Education",
   "Transport",
   "Health",
@@ -58,32 +58,38 @@ export default function ProgressBar() {
   startTimer(10);
 
   return (
-    <div class="text-center flex flex-col justify-center items-center text-white">
-      <div class="inline-block text-white">
-        <svg width="100px" height="100px" viewBox="0 0 42 42" className="donut text-white">
+    <div className="text-center flex flex-col justify-center items-center text-white">
+      <div className="inline-block text-white">
+        <svg
+          width="100px"
+          height="100px"
+          viewBox="0 0 42 42"
+          className="donut text-white"
+        >
           <circle
             id="c1"
             cx="21"
             cy="21"
             r="15.91549430918954"
-            stroke-dasharray="100 0"
-            stroke-dashoffset="100"
+            strokeDasharray="100 0"
+            strokeDashoffset="100"
           ></circle>
           <circle
             id="c2"
             cx="21"
             cy="21"
             r="15.91549430918954"
-            stroke-dasharray="0 100"
-            stroke-dashoffset="0"
+            strokeDasharray="0 100"
+            strokeDashoffset="0"
           ></circle>
-          <g class="chart-text">
+          <g className="chart-text text-white">
             <text
               x="50%"
               y="50%"
-              dominant-baseline="middle"
-              text-anchor="middle"
+              dominantBaseline="middle"
+              textAnchor="middle"
               id="counterText"
+              className="text-white"
             >
               5
             </text>

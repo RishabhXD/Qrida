@@ -14,8 +14,22 @@ const OnBoard = ({ name }) => {
   switch (page) {
     case 1:
       render = (
-        <tr className="hover">
-          <th>1</th>
+        <tr className="hover bg-info">
+          <th>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              class="stroke-current flex-shrink-0 w-6 h-6"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              ></path>
+            </svg>
+          </th>
           <td>Office</td>
           <td>19/3/2023</td>
           <td>Sunday</td>
@@ -106,7 +120,7 @@ const OnBoard = ({ name }) => {
         backgroundImage: `url("https://media.discordapp.net/attachments/1088927203477172328/1089150870110863460/image.png?width=645&height=646")`,
       }}
     >
-      <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero-overlay bg-opacity-30"></div>
       <div className="hero min-h-screen text-white w-full">
         <div className="hero-content flex-col lg:flex-row-reverse">
           <div>
@@ -121,8 +135,8 @@ const OnBoard = ({ name }) => {
               from mail, letters, phones and sometimes, the odd co-incidences
               observed in daily life...
             </p>
-            <table className="table w-full text-black">
-              <thead>
+            <table className="table w-full text-black bg-opacity-70">
+              <thead className="bg-opacity-70">
                 <tr>
                   <th></th>
                   <th>Type</th>
