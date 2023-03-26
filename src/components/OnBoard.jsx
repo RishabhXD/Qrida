@@ -111,7 +111,7 @@ const OnBoard = ({ name }) => {
     <div
       className="hero min-h-screen min-w-min"
       style={{
-        backgroundImage: `url("/public/Images/im-pb.jpeg")`,
+        backgroundImage: `url("/Images/im-pb.jpeg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
