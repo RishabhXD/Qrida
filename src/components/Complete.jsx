@@ -30,8 +30,7 @@ export default function Complete() {
               Start a new conversation!
             </button>
             <p className="pt-6 pb-6">
-              We're also building a community for aspirants to prepare together.
-              Join early and become a member!
+              We're building India's first technology startup by aspirants for aspirants while taking inspiration from the civil services preparation journey.
             </p>
 
             <div>
