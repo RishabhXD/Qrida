@@ -8,6 +8,7 @@ import OnBoard from "./components/OnBoard";
 import ProgressBar from "./components/ProgressBar";
 import Letters from "./components/Letters";
 import Complete from "./components/Complete";
+// import ProgressBar from "./components/ProgressBar";
 
 function App() {
   const [name, setName] = useState("");
@@ -33,6 +34,7 @@ function App() {
           element={<Letters name={name} />}
         ></Route>
         <Route path="/complete" element={<Complete />}></Route>
+        <Route path="/progress" element={<ProgressBar />}></Route>
       </Routes>
       <ToastContainer
         position="bottom-left"

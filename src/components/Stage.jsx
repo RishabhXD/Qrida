@@ -63,19 +63,7 @@ const Stage = ({ setStage }) => {
           </div>
         </div>
       ) : (
-        <div
-          className="hero min-h-screen"
-          style={{
-            backgroundImage: `url("https://media.discordapp.net/attachments/1088927203477172328/1089148967390035968/image.png?width=643&height=646")`,
-          }}
-        >
-          <div className="hero-overlay "></div>
-          <div className="hero-content text-center text-white">
-            <div className="max-w-md">
-              <ProgressBar />
-            </div>
-          </div>
-        </div>
+        <ProgressBar />
       )}
     </>
   );

@@ -13,7 +13,7 @@ const arrMinistry = [
   "Health",
   "Pollution",
   "Transport",
-  "Communication",
+  "Communications",
   "Education",
 ];
 
@@ -205,7 +205,10 @@ const Letters = ({ name }) => {
                 ></textarea>
                 <div className="flex flex-row justify-between">
                   <label className="label">
-                    <span htmlFor="my-modal-1" className="label-text-alt link hover:text-blue-700">
+                    <span
+                      htmlFor="my-modal-1"
+                      className="label-text-alt link hover:text-blue-700"
+                    >
                       How to reply
                     </span>
                     <input
@@ -233,7 +236,10 @@ const Letters = ({ name }) => {
                     </div>
                   </label>
                   <label className="label">
-                    <span htmlFor="my-modal" className="label-text-alt link hover:text-blue-700">
+                    <span
+                      htmlFor="my-modal"
+                      className="label-text-alt link hover:text-blue-700"
+                    >
                       Clue
                     </span>
                     <input

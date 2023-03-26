@@ -7,7 +7,7 @@ import { VscDebugRestart } from "react-icons/vsc";
 export default function Complete() {
   const navigate = useNavigate();
   const backToDistrict = () => {
-    navigate("/prep");
+    navigate("/progress");
   };
   return (
     <>

@@ -58,48 +58,60 @@ export default function ProgressBar() {
   startTimer(10);
 
   return (
-    <div className="text-center flex flex-col justify-center items-center text-white">
-      <div className="inline-block text-white">
-        <svg
-          width="100px"
-          height="100px"
-          viewBox="0 0 42 42"
-          className="donut text-white"
-        >
-          <circle
-            id="c1"
-            cx="21"
-            cy="21"
-            r="15.91549430918954"
-            strokeDasharray="100 0"
-            strokeDashoffset="100"
-          ></circle>
-          <circle
-            id="c2"
-            cx="21"
-            cy="21"
-            r="15.91549430918954"
-            strokeDasharray="0 100"
-            strokeDashoffset="0"
-          ></circle>
-          <g className="chart-text text-white">
-            <text
-              x="50%"
-              y="50%"
-              dominantBaseline="middle"
-              textAnchor="middle"
-              id="counterText"
-              className="text-white"
-            >
-              5
-            </text>
-          </g>
-        </svg>
+    <div
+      className="hero min-h-screen"
+      style={{
+        backgroundImage: `url("https://media.discordapp.net/attachments/1088927203477172328/1089148967390035968/image.png?width=643&height=646")`,
+      }}
+    >
+      <div className="hero-overlay "></div>
+      <div className="hero-content text-center text-white">
+        <div className="max-w-md">
+          <div className="text-center flex flex-col justify-center items-center text-white">
+            <div className="inline-block text-white">
+              <svg
+                width="100px"
+                height="100px"
+                viewBox="0 0 42 42"
+                className="donut text-white"
+              >
+                <circle
+                  id="c1"
+                  cx="21"
+                  cy="21"
+                  r="15.91549430918954"
+                  strokeDasharray="100 0"
+                  strokeDashoffset="100"
+                ></circle>
+                <circle
+                  id="c2"
+                  cx="21"
+                  cy="21"
+                  r="15.91549430918954"
+                  strokeDasharray="0 100"
+                  strokeDashoffset="0"
+                ></circle>
+                <g className="chart-text text-white">
+                  <text
+                    x="50%"
+                    y="50%"
+                    dominantBaseline="middle"
+                    textAnchor="middle"
+                    id="counterText"
+                    className="text-white"
+                  >
+                    5
+                  </text>
+                </g>
+              </svg>
+            </div>
+            <p>
+              Visualization is one of the best methods to begin the day’s
+              preparation. Imagine being an officer. Let's begin.
+            </p>
+          </div>
+        </div>
       </div>
-      <p>
-        Visualization is one of the best methods to begin the day’s preparation.
-        Imagine being an officer. Let's begin.
-      </p>
     </div>
   );
 }
