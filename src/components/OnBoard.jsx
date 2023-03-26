@@ -107,16 +107,17 @@ const OnBoard = ({ name }) => {
   }
 
   return (
+    <div className="overflow-x-hidden">
     <div
-      className="hero min-h-screen overflow-x-auto"
+      className="hero min-h-screen min-w-min"
       style={{
-        backgroundImage: `url("https://media.discordapp.net/attachments/1088927203477172328/1089150870110863460/image.png?width=645&height=646")`,
+        backgroundImage: `url("/public/Images/im-pb.jpeg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="hero-overlay bg-opacity-60"></div>
+      <div className="hero-overlay bg-opacity-30"></div>
       <div className="hero-content text-white w-full">
         <div className="max-w-md mx-auto px-4 sm:px-6 lg:max-w-3xl lg:px-8 xl:max-w-5xl xl:px-10">
           <h1 className="mb-5 text-3xl sm:text-4xl font-bold">
@@ -125,7 +126,7 @@ const OnBoard = ({ name }) => {
           <h1 className="mb-5 text-3xl sm:text-4xl font-bold">
             Officer {name}
           </h1>
-          <p className="mb-5">
+          <p className="mr-24 mb-5">
             This is your first day at work. It feels like a beginning again,
             exactly as the first day of your preparation for civil services. You
             start receiving your official and unofficial correspondence from
@@ -133,7 +134,8 @@ const OnBoard = ({ name }) => {
             in daily life...
           </p>
           <div className="">
-            <div className="overflow-x-auto">
+            <div className="mr-24 overflow-x-scroll">
+           
               <table className="table w-full text-black">
                 <thead className="bg-opacity-70">
                   <tr>
@@ -146,6 +148,7 @@ const OnBoard = ({ name }) => {
                 </thead>
                 <tbody>{render}</tbody>
               </table>
+       
             </div>
           </div>
 
@@ -164,6 +167,7 @@ const OnBoard = ({ name }) => {
           </label>
         </div>
       </div>
+    </div>
     </div>
   );
 };
