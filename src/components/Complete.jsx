@@ -31,6 +31,8 @@ export default function Complete() {
             </button>
             <p className="pt-6 pb-6">
               We're building India's first technology startup by aspirants for aspirants while taking inspiration from the civil services preparation journey.
+
+Join early and become members!
             </p>
 
             <div>
