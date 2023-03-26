@@ -111,7 +111,7 @@ const OnBoard = ({ name }) => {
     <div
       className="hero min-h-screen min-w-min"
       style={{
-        backgroundImage: `url("/Images/im-pb.jpeg")`,
+        backgroundImage: `url("https://cdn.discordapp.com/attachments/924801378986098768/1089560235389227068/Screenshot_2023-03-26-20-13-10-62_71a729390c97f0859a897142dab869f3.jpg")`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
