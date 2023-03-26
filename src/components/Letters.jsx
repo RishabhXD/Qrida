@@ -129,6 +129,7 @@ const Letters = ({ name }) => {
                           draggable: true,
                           progress: undefined,
                           theme: "light",
+                          delay: 1000,
                         });
                         toast(
                           "Your pre-preparation has begun. Welcome to the community.",
@@ -141,7 +142,6 @@ const Letters = ({ name }) => {
                             draggable: true,
                             progress: undefined,
                             theme: "light",
-                            delay: 1000,
                           }
                         );
                       } else if (messageId === 2) {
@@ -154,6 +154,7 @@ const Letters = ({ name }) => {
                           draggable: true,
                           progress: undefined,
                           theme: "light",
+                          delay: 1000,
                         });
                         toast("You've received a letter", {
                           position: "bottom-left",
@@ -164,7 +165,6 @@ const Letters = ({ name }) => {
                           draggable: true,
                           progress: undefined,
                           theme: "light",
-                          delay: 1000,
                         });
                       } else {
                         toast(
