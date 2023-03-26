@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Data } from "../data";
 import { useNavigate, useParams } from "react-router-dom";
 import { struct } from "../howTo";
+import { toast } from "react-toastify";
 const arrMinistry = [
   "Central",
   "Culture",
@@ -117,6 +118,68 @@ const Letters = ({ name }) => {
                       //navigate to new page if id is 4
                       if (id === 4) {
                         navigate(`/complete`);
+                      }
+                      if (messageId === 1) {
+                        toast("You've received a letter", {
+                          position: "bottom-left",
+                          autoClose: 5000,
+                          hideProgressBar: true,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: "light",
+                        });
+                        toast(
+                          "Your pre-preparation has begun. Welcome to the community.",
+                          {
+                            position: "bottom-left",
+                            autoClose: 5000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "light",
+                            delay: 1000,
+                          }
+                        );
+                      } else if (messageId === 2) {
+                        toast("Its time to understand the real world", {
+                          position: "bottom-left",
+                          autoClose: 5000,
+                          hideProgressBar: true,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: "light",
+                        });
+                        toast("You've received a letter", {
+                          position: "bottom-left",
+                          autoClose: 5000,
+                          hideProgressBar: true,
+                          closeOnClick: true,
+                          pauseOnHover: true,
+                          draggable: true,
+                          progress: undefined,
+                          theme: "light",
+                          delay: 1000,
+                        });
+                      } else {
+                        toast(
+                          "Are you thinking about reading your preparation books yet?",
+                          {
+                            position: "bottom-left",
+                            autoClose: 5000,
+                            hideProgressBar: true,
+                            closeOnClick: true,
+                            pauseOnHover: true,
+                            draggable: true,
+                            progress: undefined,
+                            theme: "light",
+                          }
+                        );
                       }
                     }}
                     disabled={message.trim().length === 0}

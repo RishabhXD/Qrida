@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { AiOutlineInfoCircle } from "react-icons/ai";
 
 const OnBoard = ({ name }) => {
   const navigate = useNavigate();
@@ -16,19 +17,7 @@ const OnBoard = ({ name }) => {
       render = (
         <tr className="hover bg-info">
           <th>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              class="stroke-current flex-shrink-0 w-6 h-6"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-              ></path>
-            </svg>
+            <AiOutlineInfoCircle fontSize={25} />
           </th>
           <td>Office</td>
           <td>19/3/2023</td>
@@ -57,7 +46,9 @@ const OnBoard = ({ name }) => {
             <td>Replied</td>
           </tr>
           <tr className="hover">
-            <th>2</th>
+            <th>
+              <AiOutlineInfoCircle fontSize={25} />
+            </th>
             <td>Urgent </td>
             <td>21/3/2023</td>
             <td>Tuesday</td>
@@ -93,7 +84,9 @@ const OnBoard = ({ name }) => {
             <td>Replied</td>
           </tr>
           <tr className="hover">
-            <th>3</th>
+            <th>
+              <AiOutlineInfoCircle fontSize={25} />
+            </th>
             <td>New Mail</td>
             <td>24/3/2023</td>
             <td>Friday</td>
