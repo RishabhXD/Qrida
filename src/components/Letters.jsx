@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Data } from "../data";
 import { useNavigate, useParams } from "react-router-dom";
 import { struct } from "../howTo";
+import { AiOutlineQuestionCircle, AiOutlineBulb } from "react-icons/ai";
 import { toast } from "react-toastify";
 const arrMinistry = [
   "Central",
@@ -205,8 +206,11 @@ const Letters = ({ name }) => {
                 ></textarea>
                 <div className="flex flex-row justify-between">
                   <label className="label">
-                    <span htmlFor="my-modal-1" className="label-text-alt btn btn-sm btn-primary text-white">
-                      How to reply
+                    <span
+                      htmlFor="my-modal-1"
+                      className="label-text-alt btn btn-info text-white"
+                    >
+                      <AiOutlineQuestionCircle fontSize={25} />
                     </span>
                     <input
                       type="checkbox"
@@ -233,8 +237,11 @@ const Letters = ({ name }) => {
                     </div>
                   </label>
                   <label className="label">
-                    <span htmlFor="my-modal" className="label-text-alt btn btn-sm btn-primary text-white">
-                      Clue
+                    <span
+                      htmlFor="my-modal"
+                      className="label-text-alt btn btn-success text-white"
+                    >
+                      <AiOutlineBulb fontSize={25} />
                     </span>
                     <input
                       type="checkbox"

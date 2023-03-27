@@ -8,13 +8,13 @@ const StageComponent = ({ text, setStage, buttonText, img }) => {
         backgroundImage: `url('${img}')`,
       }}
     >
-      <div className="hero-overlay bg-opacity-30"></div>
+      <div className="hero-overlay bg-opacity-50"></div>
       <div className="hero-content text-center">
         <div className="max-w-md">
           <p className="py-6 font-bold text-white">{text}</p>
-          <div className="flex flex-col gap-5">
+          <div className="flex flex-col gap-5 items-center">
             <button
-              className="btn btn-primary"
+              className="btn border-none btn-primary"
               onClick={(e) => {
                 setStage(4);
               }}
@@ -22,7 +22,7 @@ const StageComponent = ({ text, setStage, buttonText, img }) => {
               {buttonText}
             </button>
             <button
-              className="btn bg-white text-black border-2 border-blue-500"
+              className="btn bg-white text-black border-2 border-blue-500 w-content hover:text-white"
               onClick={(e) => {
                 setStage(0);
               }}

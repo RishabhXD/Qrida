@@ -108,66 +108,64 @@ const OnBoard = ({ name }) => {
 
   return (
     <div className="overflow-x-hidden">
-    <div
-      className="hero min-h-screen min-w-min"
-      style={{
-        backgroundImage: `url("https://cdn.discordapp.com/attachments/924801378986098768/1089560235389227068/Screenshot_2023-03-26-20-13-10-62_71a729390c97f0859a897142dab869f3.jpg")`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      <div className="hero-overlay bg-opacity-30"></div>
-      <div className="hero-content text-white w-full">
-        <div className="max-w-md mx-auto px-4 sm:px-6 lg:max-w-3xl lg:px-8 xl:max-w-5xl xl:px-10">
-          <h1 className="mb-5 text-3xl sm:text-4xl font-bold">
-            {ministry ? ministry : "Ministry"}
-          </h1>
-          <h1 className="mb-5 text-3xl sm:text-4xl font-bold">
-            Officer {name}
-          </h1>
-          <p className="mr-24 mb-5">
-            This is your first day at work. It feels like a beginning again,
-            exactly as the first day of your preparation for civil services. You
-            start receiving your official and unofficial correspondence from
-            mail, letters, phones and sometimes, the odd co-incidences observed
-            in daily life...
-          </p>
-          <div className="">
-            <div className="mr-24 overflow-x-scroll">
-           
-              <table className="table w-full text-black">
-                <thead className="bg-opacity-70">
-                  <tr>
-                    <th></th>
-                    <th>Type</th>
-                    <th>Date</th>
-                    <th>Day</th>
-                    <th>Response</th>
-                  </tr>
-                </thead>
-                <tbody>{render}</tbody>
-              </table>
-       
+      <div
+        className="hero min-h-screen min-w-min"
+        style={{
+          backgroundImage: `url("https://cdn.discordapp.com/attachments/924801378986098768/1089560235389227068/Screenshot_2023-03-26-20-13-10-62_71a729390c97f0859a897142dab869f3.jpg")`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="hero-overlay bg-opacity-70"></div>
+        <div className="hero-content text-white w-full">
+          <div className="max-w-md mx-auto px-4 sm:px-6 lg:max-w-3xl lg:px-8 xl:max-w-5xl xl:px-10">
+            <h1 className="mb-5 text-3xl sm:text-4xl font-bold">
+              {ministry ? ministry : "Ministry"}
+            </h1>
+            <h1 className="mb-5 text-3xl sm:text-4xl font-bold">
+              Officer {name}
+            </h1>
+            <p className="mr-24 mb-5">
+              This is your first day at work. It feels like a beginning again,
+              exactly as the first day of your preparation for civil services.
+              You start receiving your official and unofficial correspondence
+              from mail, letters, phones and sometimes, the odd co-incidences
+              observed in daily life...
+            </p>
+            <div className="">
+              <div className="mr-24 overflow-x-scroll">
+                <table className="table w-full text-black ">
+                  <thead className="bg-opacity-70">
+                    <tr>
+                      <th></th>
+                      <th>Type</th>
+                      <th>Date</th>
+                      <th>Day</th>
+                      <th>Response</th>
+                    </tr>
+                  </thead>
+                  <tbody>{render}</tbody>
+                </table>
+              </div>
             </div>
-          </div>
 
-          <input type="checkbox" id="my-modal-4" className="modal-toggle" />
-          <label htmlFor="my-modal-4" className="modal cursor-pointer">
-            <label
-              className="modal-box relative bg-warning sm:w-1/2 md:w-1/3 lg:w-1/4"
-              htmlFor=""
-            >
-              <h3 className="text-lg font-bold">Warning Letter!</h3>
-              <p className="py-4">
-                your office found out about your lack of intent to deal with a
-                citizen’s concerns. Do better next time!
-              </p>
+            <input type="checkbox" id="my-modal-4" className="modal-toggle" />
+            <label htmlFor="my-modal-4" className="modal cursor-pointer">
+              <label
+                className="modal-box relative bg-warning sm:w-1/2 md:w-1/3 lg:w-1/4"
+                htmlFor=""
+              >
+                <h3 className="text-lg font-bold">Warning Letter!</h3>
+                <p className="py-4">
+                  your office found out about your lack of intent to deal with a
+                  citizen’s concerns. Do better next time!
+                </p>
+              </label>
             </label>
-          </label>
+          </div>
         </div>
       </div>
-    </div>
     </div>
   );
 };

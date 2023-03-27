@@ -33,7 +33,7 @@ const Hero = ({ name, setName }) => {
             onChange={changeVal}
           />
           <button
-            className="btn btn-primary disabled:text-white disabled:btn-ghost"
+            className="btn bg-white text-black disabled:text-white disabled:bg-opacity-70"
             onClick={changePage}
             disabled={name.trim().length === 0}
           >
